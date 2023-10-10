@@ -1,10 +1,22 @@
 # KataExalIT
 Ingestion FlightRadar24 with Pyspark
 
+## pré-requis :
+lancer la commande :
+pip install requirements.txt
+dans le terminal pour avoir les bons packages
+
 ### Extraction
 Récupération des données de l'API via la class extract
-et création de 3 dataFrames :
+création de 3 dataFrames :
 Flights, airports et airlines
+stockage des données dans un espace partitionné par {année-mois-jour}/heure.
+
+### Cleaning
+filtre pour retirer des valeurs qui entrainent des inchorénces dans l'analyse
+
+### functions
+les fonctions dont j'ai besoin pour répondre aux questions et qui peuvent etre réutilisées
 
 ### Transformation
 Nettoyage de la donnée, transformation pour répondre aux questions suivnates:
@@ -23,6 +35,5 @@ Nettoyage de la donnée, transformation pour répondre aux questions suivnates:
 
 affichage des resultats
 
-### Partie chargement non traité aux vues des résultats
-Une explication a été donné dans la partie transform si besoin de chargement.
-
+### main
+session pour l'affichage des résultats et logging pour d'éventuels erreurs
